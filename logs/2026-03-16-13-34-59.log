@@ -1,0 +1,77 @@
+2026-03-16 13:34:59 | INFO     | Конфигурация загружена
+2026-03-16 13:35:05 | INFO     | Настройки сохранены
+2026-03-16 13:35:05 | INFO     | Запуск бота Ozon...
+2026-03-16 13:35:05 | INFO     | OzonBot: Бот запущен
+2026-03-16 13:35:06 | INFO     | Ozon: Успешное подключение к API
+2026-03-16 13:35:06 | INFO     | OzonBot: Начало обработки отзывов
+2026-03-16 13:35:06 | INFO     | Ozon API: Raw UNPROCESSED page: 0, has_next: False
+2026-03-16 13:35:06 | INFO     | Ozon API: Raw UNPROCESSED reviews page: 0, has_next: False
+2026-03-16 13:35:06 | INFO     | Ozon API: Processed 0 unanswered reviews after enrichment (min_rating=1)
+2026-03-16 13:35:06 | WARNING  | Ozon API: No reviews after rating filter - check API response structure in logs
+2026-03-16 13:35:06 | INFO     | Ozon: Found 0 unanswered reviews ready for processing
+2026-03-16 13:35:06 | INFO     | OzonBot: Нет новых отзывов для обработки
+2026-03-16 13:35:06 | DEBUG    | OzonBot: Ожидание 3600 секунд до следующей проверки
+2026-03-16 14:01:30 | INFO     | OzonBot: Остановка бота...
+2026-03-16 14:01:30 | INFO     | OzonBot: Бот остановлен
+2026-03-16 14:01:30 | INFO     | Бот Ozon остановлен
+2026-03-16 14:01:38 | INFO     | Настройки сохранены
+2026-03-16 14:01:38 | INFO     | Запуск бота Ozon...
+2026-03-16 14:01:38 | INFO     | OzonBot: Бот запущен
+2026-03-16 14:01:45 | INFO     | Ozon: Успешное подключение к API
+2026-03-16 14:01:45 | INFO     | OzonBot: Начало обработки отзывов
+2026-03-16 14:01:45 | INFO     | Ozon API: Raw UNPROCESSED page: 8, has_next: False
+2026-03-16 14:01:45 | INFO     | Ozon API: Raw UNPROCESSED reviews page: 8, has_next: False
+2026-03-16 14:01:45 | INFO     | Ozon API DEBUG FULL REVIEW INFO for 019cf638-3b59-7390-ae09-2f1053178436: {
+  "photos": [],
+  "videos": [],
+  "id": "019cf638-3b59-7390-ae09-2f1053178436",
+  "sku": 1012241836,
+  "status": "UNPROCESSED",
+  "rating": 5,
+  "comments_amount": 0,
+  "likes_amount": 0,
+  "dislikes_amount": 0,
+  "text": "",
+  "photos_amount": 0,
+  "videos_amount": 0,
+  "published_at": "2026-03-16T10:36:46.588313Z",
+  "order_status": "DELIVERED",
+  "is_rating_participant": true
+}
+2026-03-16 14:01:45 | DEBUG    | Ozon API: Enriched 019cf638-3b59-7390-ae09-2f1053178436 rating=5 text_len=0
+2026-03-16 14:01:45 | DEBUG    | Ozon API: Enriched 019cf63c-04b1-7dbc-a7aa-f0bcab3b6dad rating=5 text_len=0
+2026-03-16 14:01:45 | DEBUG    | Ozon API: Enriched 019cf63c-81ae-7ad8-aabc-09b5d092ecec rating=5 text_len=0
+2026-03-16 14:01:45 | DEBUG    | Ozon API: Enriched 019cf63d-9ca5-709e-b7e3-179ecf99eb17 rating=5 text_len=0
+2026-03-16 14:01:45 | DEBUG    | Ozon API: Enriched 019cf642-b75a-78d9-9be9-1c614feba80d rating=5 text_len=0
+2026-03-16 14:01:45 | DEBUG    | Ozon API: Enriched 019cf643-c872-7e29-80fb-249601325057 rating=5 text_len=0
+2026-03-16 14:01:45 | DEBUG    | Ozon API: Enriched 019cf645-cd20-76c2-89f0-58a6efa02826 rating=5 text_len=0
+2026-03-16 14:01:45 | DEBUG    | Ozon API: Enriched 019cf64c-81e7-709d-b567-ecf25d0978d4 rating=5 text_len=0
+2026-03-16 14:01:45 | INFO     | Ozon API: Processed 8 unanswered reviews after enrichment (min_rating=1)
+2026-03-16 14:01:45 | INFO     | Ozon: Found 8 unanswered reviews ready for processing
+2026-03-16 14:01:45 | INFO     | Ozon: First review example: rating=5 text_len=0
+2026-03-16 14:01:45 | DEBUG    | OzonBot: Processing review 019cf638-3b59-7390-ae09-2f1053178436 rating=5 has_comment=False
+2026-03-16 14:01:46 | INFO     | Ozon API: Comment sent to review 019cf638-3b59-7390-ae09-2f1053178436, ID: 019cf64f-1d83-780f-93e7-c0c64d39dedb
+2026-03-16 14:01:46 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf638-3b59-7390-ae09-2f1053178436 (5 звезд)
+2026-03-16 14:01:46 | DEBUG    | OzonBot: Processing review 019cf63c-04b1-7dbc-a7aa-f0bcab3b6dad rating=5 has_comment=False
+2026-03-16 14:01:47 | INFO     | Ozon API: Comment sent to review 019cf63c-04b1-7dbc-a7aa-f0bcab3b6dad, ID: 019cf64f-205c-7d17-bfd9-b6dcca94191c
+2026-03-16 14:01:47 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf63c-04b1-7dbc-a7aa-f0bcab3b6dad (5 звезд)
+2026-03-16 14:01:47 | DEBUG    | OzonBot: Processing review 019cf63c-81ae-7ad8-aabc-09b5d092ecec rating=5 has_comment=False
+2026-03-16 14:01:47 | INFO     | Ozon API: Comment sent to review 019cf63c-81ae-7ad8-aabc-09b5d092ecec, ID: 019cf64f-23ab-72a4-8a19-366b73d570ba
+2026-03-16 14:01:47 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf63c-81ae-7ad8-aabc-09b5d092ecec (5 звезд)
+2026-03-16 14:01:48 | DEBUG    | OzonBot: Processing review 019cf63d-9ca5-709e-b7e3-179ecf99eb17 rating=5 has_comment=False
+2026-03-16 14:01:48 | INFO     | Ozon API: Comment sent to review 019cf63d-9ca5-709e-b7e3-179ecf99eb17, ID: 019cf64f-272e-7364-bb1d-a7ab9a8c9973
+2026-03-16 14:01:48 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf63d-9ca5-709e-b7e3-179ecf99eb17 (5 звезд)
+2026-03-16 14:01:49 | DEBUG    | OzonBot: Processing review 019cf642-b75a-78d9-9be9-1c614feba80d rating=5 has_comment=False
+2026-03-16 14:01:49 | INFO     | Ozon API: Comment sent to review 019cf642-b75a-78d9-9be9-1c614feba80d, ID: 019cf64f-2a21-7556-9a73-919e9be0b8ce
+2026-03-16 14:01:49 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf642-b75a-78d9-9be9-1c614feba80d (5 звезд)
+2026-03-16 14:01:49 | DEBUG    | OzonBot: Processing review 019cf643-c872-7e29-80fb-249601325057 rating=5 has_comment=False
+2026-03-16 14:01:49 | INFO     | Ozon API: Comment sent to review 019cf643-c872-7e29-80fb-249601325057, ID: 019cf64f-2c5c-7209-8661-5e94e579780f
+2026-03-16 14:01:49 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf643-c872-7e29-80fb-249601325057 (5 звезд)
+2026-03-16 14:01:50 | DEBUG    | OzonBot: Processing review 019cf645-cd20-76c2-89f0-58a6efa02826 rating=5 has_comment=False
+2026-03-16 14:01:50 | INFO     | Ozon API: Comment sent to review 019cf645-cd20-76c2-89f0-58a6efa02826, ID: 019cf64f-2e7a-7327-a63a-fb6ae7911844
+2026-03-16 14:01:50 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf645-cd20-76c2-89f0-58a6efa02826 (5 звезд)
+2026-03-16 14:01:50 | DEBUG    | OzonBot: Processing review 019cf64c-81e7-709d-b567-ecf25d0978d4 rating=5 has_comment=False
+2026-03-16 14:01:51 | INFO     | Ozon API: Comment sent to review 019cf64c-81e7-709d-b567-ecf25d0978d4, ID: 019cf64f-30c4-7b96-9c4f-c4ce621dd7e3
+2026-03-16 14:01:51 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf64c-81e7-709d-b567-ecf25d0978d4 (5 звезд)
+2026-03-16 14:01:51 | INFO     | OzonBot: Обработка завершена. Отвечено на 8 отзывов
+2026-03-16 14:01:51 | DEBUG    | OzonBot: Ожидание 3600 секунд до следующей проверки

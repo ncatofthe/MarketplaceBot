@@ -1,0 +1,11 @@
+# Основные зависимости
+requests>=2.28.0
+pycryptodome>=3.15.0
+
+# Для GUI (встроен в Python)
+# tkinter поставляется с Python
+
+# Для работы с API
+# Ozon API - используется requests
+# Wildberries API - используется requests
+

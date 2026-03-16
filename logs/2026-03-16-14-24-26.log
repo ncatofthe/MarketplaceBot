@@ -1,0 +1,149 @@
+2026-03-16 14:24:26 | INFO     | Конфигурация загружена
+2026-03-16 14:24:32 | INFO     | Настройки сохранены
+2026-03-16 14:24:32 | INFO     | Запуск бота Ozon...
+2026-03-16 14:24:32 | INFO     | OzonBot: Бот запущен
+2026-03-16 14:24:32 | INFO     | Ozon: Успешное подключение к API
+2026-03-16 14:24:32 | INFO     | OzonBot: Начало обработки отзывов
+2026-03-16 14:24:32 | INFO     | Ozon API: Raw UNPROCESSED page: 0, has_next: False
+2026-03-16 14:24:32 | INFO     | Ozon API: Raw UNPROCESSED reviews page: 0, has_next: False
+2026-03-16 14:24:32 | INFO     | Ozon API: Processed 0 unanswered reviews after enrichment (min_rating=1)
+2026-03-16 14:24:32 | WARNING  | Ozon API: No reviews after rating filter - check API response structure in logs
+2026-03-16 14:24:32 | INFO     | Ozon: Found 0 unanswered reviews ready for processing
+2026-03-16 14:24:32 | INFO     | OzonBot: Нет новых отзывов для обработки
+2026-03-16 14:24:32 | DEBUG    | OzonBot: Ожидание 3600 секунд до следующей проверки
+2026-03-16 15:24:33 | INFO     | Ozon: Успешное подключение к API
+2026-03-16 15:24:33 | INFO     | OzonBot: Начало обработки отзывов
+2026-03-16 15:24:33 | INFO     | Ozon API: Raw UNPROCESSED page: 9, has_next: False
+2026-03-16 15:24:33 | INFO     | Ozon API: Raw UNPROCESSED reviews page: 9, has_next: False
+2026-03-16 15:24:33 | INFO     | Ozon API DEBUG FULL REVIEW INFO for 019cf671-8651-750b-9200-9332e676f64a: {
+  "photos": [],
+  "videos": [],
+  "id": "019cf671-8651-750b-9200-9332e676f64a",
+  "sku": 2022805508,
+  "status": "UNPROCESSED",
+  "rating": 5,
+  "comments_amount": 0,
+  "likes_amount": 0,
+  "dislikes_amount": 0,
+  "text": "",
+  "photos_amount": 0,
+  "videos_amount": 0,
+  "published_at": "2026-03-16T11:39:21.563009Z",
+  "order_status": "DELIVERED",
+  "is_rating_participant": true
+}
+2026-03-16 15:24:33 | INFO     | 019cf671-8651-750b-9200-9332e676f64a: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 15:24:33 | DEBUG    | Ozon API: Enriched 019cf671-8651-750b-9200-9332e676f64a rating=5 text_len=0
+2026-03-16 15:24:33 | INFO     | 019cf673-746f-702d-b9be-89b5a74801d2: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 15:24:33 | DEBUG    | Ozon API: Enriched 019cf673-746f-702d-b9be-89b5a74801d2 rating=5 text_len=0
+2026-03-16 15:24:33 | INFO     | 019cf679-22d1-76d3-ad20-3ded29eb6db1: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 15:24:33 | DEBUG    | Ozon API: Enriched 019cf679-22d1-76d3-ad20-3ded29eb6db1 rating=5 text_len=0
+2026-03-16 15:24:33 | INFO     | 019cf680-f11d-7a19-b460-e6ad15572a05: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 15:24:33 | DEBUG    | Ozon API: Enriched 019cf680-f11d-7a19-b460-e6ad15572a05 rating=5 text_len=56
+2026-03-16 15:24:33 | INFO     | 019cf684-2d19-7b5c-8423-5c55c0f00be7: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 15:24:33 | DEBUG    | Ozon API: Enriched 019cf684-2d19-7b5c-8423-5c55c0f00be7 rating=5 text_len=0
+2026-03-16 15:24:33 | INFO     | 019cf68a-3c58-71f7-94fd-efe316fd70b5: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 15:24:33 | DEBUG    | Ozon API: Enriched 019cf68a-3c58-71f7-94fd-efe316fd70b5 rating=5 text_len=0
+2026-03-16 15:24:33 | INFO     | 019cf68c-3fdb-7e90-996e-8232394f806c: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 15:24:33 | DEBUG    | Ozon API: Enriched 019cf68c-3fdb-7e90-996e-8232394f806c rating=5 text_len=0
+2026-03-16 15:24:34 | INFO     | 019cf68d-f02d-7418-8def-6e76bf773bfd: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 15:24:34 | DEBUG    | Ozon API: Enriched 019cf68d-f02d-7418-8def-6e76bf773bfd rating=5 text_len=0
+2026-03-16 15:24:34 | INFO     | 019cf69a-d6c3-7332-987d-7d210a2a50a2: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 15:24:34 | DEBUG    | Ozon API: Enriched 019cf69a-d6c3-7332-987d-7d210a2a50a2 rating=5 text_len=0
+2026-03-16 15:24:34 | INFO     | Ozon API: Processed 9 unanswered reviews after enrichment (min_rating=1)
+2026-03-16 15:24:34 | INFO     | Ozon: Found 9 unanswered reviews ready for processing
+2026-03-16 15:24:34 | INFO     | Ozon: First review example: rating=5 text_len=0
+2026-03-16 15:24:34 | DEBUG    | OzonBot: Processing review 019cf671-8651-750b-9200-9332e676f64a rating=5 has_comment=False
+2026-03-16 15:24:34 | INFO     | OzonBot: Отзыв 019cf671-8651-750b-9200-9332e676f64a (Ozon rating=5, has_comment=False): 'Здравствуйте! Спасибо за Ваши 5 звездочек! Очень рады, что Вы остались довольны нашим продуктом! С у...'
+2026-03-16 15:24:34 | INFO     | Ozon API: Comment sent to review 019cf671-8651-750b-9200-9332e676f64a, ID: 019cf69a-ec69-7e2e-aa5b-042b93ac6745
+2026-03-16 15:24:34 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf671-8651-750b-9200-9332e676f64a (5 звезд)
+2026-03-16 15:24:34 | DEBUG    | OzonBot: Processing review 019cf673-746f-702d-b9be-89b5a74801d2 rating=5 has_comment=False
+2026-03-16 15:24:34 | INFO     | OzonBot: Отзыв 019cf673-746f-702d-b9be-89b5a74801d2 (Ozon rating=5, has_comment=False): 'Добрый день! Спасибо за Ваши 5 звездочек! Спасибо, что выбрали нашу продукцию! Нам будет приятно вид...'
+2026-03-16 15:24:34 | INFO     | Ozon API: Comment sent to review 019cf673-746f-702d-b9be-89b5a74801d2, ID: 019cf69a-ee99-7c83-8c88-72445b6e5199
+2026-03-16 15:24:34 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf673-746f-702d-b9be-89b5a74801d2 (5 звезд)
+2026-03-16 15:24:35 | DEBUG    | OzonBot: Processing review 019cf679-22d1-76d3-ad20-3ded29eb6db1 rating=5 has_comment=False
+2026-03-16 15:24:35 | INFO     | OzonBot: Отзыв 019cf679-22d1-76d3-ad20-3ded29eb6db1 (Ozon rating=5, has_comment=False): 'Здравствуйте! Спасибо за Ваши 5 звездочек! Очень рады, что Вы остались довольны нашим продуктом! Нам...'
+2026-03-16 15:24:35 | INFO     | Ozon API: Comment sent to review 019cf679-22d1-76d3-ad20-3ded29eb6db1, ID: 019cf69a-f0f6-7a92-910e-dd96bc39a443
+2026-03-16 15:24:35 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf679-22d1-76d3-ad20-3ded29eb6db1 (5 звезд)
+2026-03-16 15:24:35 | DEBUG    | OzonBot: Processing review 019cf680-f11d-7a19-b460-e6ad15572a05 rating=5 has_comment=True
+2026-03-16 15:24:35 | INFO     | OzonBot: Отзыв 019cf680-f11d-7a19-b460-e6ad15572a05 (Ozon rating=5, has_comment=True): 'Добрый день! Спасибо за Ваши 5 звездочек! Спасибо за такую высокую оценку! Мы работаем для Вас! Нам ...'
+2026-03-16 15:24:35 | INFO     | Ozon API: Comment sent to review 019cf680-f11d-7a19-b460-e6ad15572a05, ID: 019cf69a-f32d-76fb-9b6d-d6e7e8fd68db
+2026-03-16 15:24:35 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf680-f11d-7a19-b460-e6ad15572a05 (5 звезд)
+2026-03-16 15:24:36 | DEBUG    | OzonBot: Processing review 019cf684-2d19-7b5c-8423-5c55c0f00be7 rating=5 has_comment=False
+2026-03-16 15:24:36 | INFO     | OzonBot: Отзыв 019cf684-2d19-7b5c-8423-5c55c0f00be7 (Ozon rating=5, has_comment=False): 'Спасибо за Ваши 5 звездочек! Большое спасибо за положительную оценку! Рекомендуем Вам приобрести и д...'
+2026-03-16 15:24:36 | INFO     | Ozon API: Comment sent to review 019cf684-2d19-7b5c-8423-5c55c0f00be7, ID: 019cf69a-f57c-7884-8140-ddf68c6cb1ac
+2026-03-16 15:24:36 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf684-2d19-7b5c-8423-5c55c0f00be7 (5 звезд)
+2026-03-16 15:24:37 | DEBUG    | OzonBot: Processing review 019cf68a-3c58-71f7-94fd-efe316fd70b5 rating=5 has_comment=False
+2026-03-16 15:24:37 | INFO     | OzonBot: Отзыв 019cf68a-3c58-71f7-94fd-efe316fd70b5 (Ozon rating=5, has_comment=False): 'Здравствуйте! Спасибо за Ваши 5 звездочек! Спасибо за такую высокую оценку! Мы работаем для Вас! С у...'
+2026-03-16 15:24:37 | INFO     | Ozon API: Comment sent to review 019cf68a-3c58-71f7-94fd-efe316fd70b5, ID: 019cf69a-f82b-76a2-847c-97212e1464df
+2026-03-16 15:24:37 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf68a-3c58-71f7-94fd-efe316fd70b5 (5 звезд)
+2026-03-16 15:24:37 | DEBUG    | OzonBot: Processing review 019cf68c-3fdb-7e90-996e-8232394f806c rating=5 has_comment=False
+2026-03-16 15:24:37 | INFO     | OzonBot: Отзыв 019cf68c-3fdb-7e90-996e-8232394f806c (Ozon rating=5, has_comment=False): 'Спасибо за Ваши 5 звездочек! Мы рады, что Вы обратили внимание на нашу продукцию! С уважением, коман...'
+2026-03-16 15:24:37 | INFO     | Ozon API: Comment sent to review 019cf68c-3fdb-7e90-996e-8232394f806c, ID: 019cf69a-fa7d-7de4-8045-fda42bb54c62
+2026-03-16 15:24:37 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf68c-3fdb-7e90-996e-8232394f806c (5 звезд)
+2026-03-16 15:24:38 | DEBUG    | OzonBot: Processing review 019cf68d-f02d-7418-8def-6e76bf773bfd rating=5 has_comment=False
+2026-03-16 15:24:38 | INFO     | OzonBot: Отзыв 019cf68d-f02d-7418-8def-6e76bf773bfd (Ozon rating=5, has_comment=False): 'Здравствуйте! Спасибо за Ваши 5 звездочек! Большое спасибо за положительную оценку! Нам будет приятн...'
+2026-03-16 15:24:38 | INFO     | Ozon API: Comment sent to review 019cf68d-f02d-7418-8def-6e76bf773bfd, ID: 019cf69a-fcc4-7e51-b397-7b4a501e89dc
+2026-03-16 15:24:38 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf68d-f02d-7418-8def-6e76bf773bfd (5 звезд)
+2026-03-16 15:24:38 | DEBUG    | OzonBot: Processing review 019cf69a-d6c3-7332-987d-7d210a2a50a2 rating=5 has_comment=False
+2026-03-16 15:24:38 | INFO     | OzonBot: Отзыв 019cf69a-d6c3-7332-987d-7d210a2a50a2 (Ozon rating=5, has_comment=False): 'Спасибо за Ваши 5 звездочек! Мы очень рады, что Вы остались довольны покупкой. Нам будет приятно вид...'
+2026-03-16 15:24:38 | INFO     | Ozon API: Comment sent to review 019cf69a-d6c3-7332-987d-7d210a2a50a2, ID: 019cf69a-ff1b-75cf-96e7-98a2a3a0b2b5
+2026-03-16 15:24:38 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf69a-d6c3-7332-987d-7d210a2a50a2 (5 звезд)
+2026-03-16 15:24:39 | INFO     | OzonBot: Обработка завершена. Отвечено на 9 отзывов
+2026-03-16 15:24:39 | DEBUG    | OzonBot: Ожидание 3600 секунд до следующей проверки
+2026-03-16 16:24:47 | INFO     | Ozon: Успешное подключение к API
+2026-03-16 16:24:47 | INFO     | OzonBot: Начало обработки отзывов
+2026-03-16 16:24:47 | INFO     | Ozon API: Raw UNPROCESSED page: 5, has_next: False
+2026-03-16 16:24:47 | INFO     | Ozon API: Raw UNPROCESSED reviews page: 5, has_next: False
+2026-03-16 16:24:47 | INFO     | Ozon API DEBUG FULL REVIEW INFO for 019cf6ab-7b27-786e-a9bb-32822e348718: {
+  "photos": [],
+  "videos": [],
+  "id": "019cf6ab-7b27-786e-a9bb-32822e348718",
+  "sku": 1134378505,
+  "status": "UNPROCESSED",
+  "rating": 5,
+  "comments_amount": 0,
+  "likes_amount": 0,
+  "dislikes_amount": 0,
+  "text": "",
+  "photos_amount": 0,
+  "videos_amount": 0,
+  "published_at": "2026-03-16T12:42:39.680845Z",
+  "order_status": "DELIVERED",
+  "is_rating_participant": true
+}
+2026-03-16 16:24:47 | INFO     | 019cf6ab-7b27-786e-a9bb-32822e348718: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 16:24:47 | DEBUG    | Ozon API: Enriched 019cf6ab-7b27-786e-a9bb-32822e348718 rating=5 text_len=0
+2026-03-16 16:24:47 | INFO     | 019cf6ad-953a-78de-8ff1-bb0d539cc619: Raw Ozon rating=4 (type=<class 'int'>), extracted=4, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 16:24:47 | DEBUG    | Ozon API: Enriched 019cf6ad-953a-78de-8ff1-bb0d539cc619 rating=4 text_len=0
+2026-03-16 16:24:47 | INFO     | 019cf6b9-bc14-7d04-8529-438a1d915c53: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 16:24:47 | DEBUG    | Ozon API: Enriched 019cf6b9-bc14-7d04-8529-438a1d915c53 rating=5 text_len=49
+2026-03-16 16:24:47 | INFO     | 019cf6c3-3b9c-77ca-be24-6bb391fd7446: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 16:24:47 | DEBUG    | Ozon API: Enriched 019cf6c3-3b9c-77ca-be24-6bb391fd7446 rating=5 text_len=0
+2026-03-16 16:24:47 | INFO     | 019cf6ce-c5c0-7a6b-b112-166f97fe43af: Raw Ozon rating=5 (type=<class 'int'>), extracted=5, keys=['photos', 'videos', 'id', 'sku', 'status', 'rating', 'comments_amount', 'likes_amount', 'dislikes_amount', 'text', 'photos_amount', 'videos_amount', 'published_at', 'order_status', 'is_rating_participant']
+2026-03-16 16:24:47 | DEBUG    | Ozon API: Enriched 019cf6ce-c5c0-7a6b-b112-166f97fe43af rating=5 text_len=0
+2026-03-16 16:24:47 | INFO     | Ozon API: Processed 5 unanswered reviews after enrichment (min_rating=1)
+2026-03-16 16:24:47 | INFO     | Ozon: Found 5 unanswered reviews ready for processing
+2026-03-16 16:24:47 | INFO     | Ozon: First review example: rating=5 text_len=0
+2026-03-16 16:24:47 | DEBUG    | OzonBot: Processing review 019cf6ab-7b27-786e-a9bb-32822e348718 rating=5 has_comment=False
+2026-03-16 16:24:47 | INFO     | OzonBot: Отзыв 019cf6ab-7b27-786e-a9bb-32822e348718 (Ozon rating=5, has_comment=False): 'Спасибо за Ваши 5 звездочек! Спасибо, что Вы выбрали нашу компанию! Искренне Ваша команда....'
+2026-03-16 16:24:47 | INFO     | Ozon API: Comment sent to review 019cf6ab-7b27-786e-a9bb-32822e348718, ID: 019cf6d2-14a8-70ec-bf20-c1ac9e5dab35
+2026-03-16 16:24:47 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf6ab-7b27-786e-a9bb-32822e348718 (5 звезд)
+2026-03-16 16:24:48 | DEBUG    | OzonBot: Processing review 019cf6ad-953a-78de-8ff1-bb0d539cc619 rating=4 has_comment=False
+2026-03-16 16:24:48 | INFO     | OzonBot: Отзыв 019cf6ad-953a-78de-8ff1-bb0d539cc619 (Ozon rating=4, has_comment=False): 'Спасибо за Ваши 4 звездочки! Благодарим за покупку и за оценку! С уважением, представитель бренда....'
+2026-03-16 16:24:48 | INFO     | Ozon API: Comment sent to review 019cf6ad-953a-78de-8ff1-bb0d539cc619, ID: 019cf6d2-1724-71bc-9b36-04a6c4c5d22c
+2026-03-16 16:24:48 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf6ad-953a-78de-8ff1-bb0d539cc619 (4 звезд)
+2026-03-16 16:24:48 | DEBUG    | OzonBot: Processing review 019cf6b9-bc14-7d04-8529-438a1d915c53 rating=5 has_comment=True
+2026-03-16 16:24:48 | INFO     | OzonBot: Отзыв 019cf6b9-bc14-7d04-8529-438a1d915c53 (Ozon rating=5, has_comment=True): 'Здравствуйте! Спасибо за Ваши 5 звездочек! Очень рады вашей обратной связи! С уважением, представите...'
+2026-03-16 16:24:48 | INFO     | Ozon API: Comment sent to review 019cf6b9-bc14-7d04-8529-438a1d915c53, ID: 019cf6d2-1958-76cc-8f27-e44c0414f332
+2026-03-16 16:24:48 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf6b9-bc14-7d04-8529-438a1d915c53 (5 звезд)
+2026-03-16 16:24:49 | DEBUG    | OzonBot: Processing review 019cf6c3-3b9c-77ca-be24-6bb391fd7446 rating=5 has_comment=False
+2026-03-16 16:24:49 | INFO     | OzonBot: Отзыв 019cf6c3-3b9c-77ca-be24-6bb391fd7446 (Ozon rating=5, has_comment=False): 'Спасибо за Ваши 5 звездочек! Спасибо за такую высокую оценку! Мы работаем для Вас! Рекомендуем Вам п...'
+2026-03-16 16:24:49 | INFO     | Ozon API: Comment sent to review 019cf6c3-3b9c-77ca-be24-6bb391fd7446, ID: 019cf6d2-1b7e-7b75-87be-35351589d5a1
+2026-03-16 16:24:49 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf6c3-3b9c-77ca-be24-6bb391fd7446 (5 звезд)
+2026-03-16 16:24:49 | DEBUG    | OzonBot: Processing review 019cf6ce-c5c0-7a6b-b112-166f97fe43af rating=5 has_comment=False
+2026-03-16 16:24:49 | INFO     | OzonBot: Отзыв 019cf6ce-c5c0-7a6b-b112-166f97fe43af (Ozon rating=5, has_comment=False): 'Здравствуйте! Спасибо за Ваши 5 звездочек! Благодарим за покупку и за оценку! С уважением, команда п...'
+2026-03-16 16:24:49 | INFO     | Ozon API: Comment sent to review 019cf6ce-c5c0-7a6b-b112-166f97fe43af, ID: 019cf6d2-1dba-7764-8716-87847bab138d
+2026-03-16 16:24:50 | INFO     | OzonBot: Ответ отправлен на отзыв 019cf6ce-c5c0-7a6b-b112-166f97fe43af (5 звезд)
+2026-03-16 16:24:50 | INFO     | OzonBot: Обработка завершена. Отвечено на 5 отзывов
+2026-03-16 16:24:50 | DEBUG    | OzonBot: Ожидание 3600 секунд до следующей проверки

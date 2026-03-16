@@ -1,0 +1,13 @@
+2026-03-16 14:06:49 | INFO     | Ozon: Успешное подключение к API
+2026-03-16 14:06:49 | INFO     | Ozon API: Raw UNPROCESSED page: 0, has_next: False
+2026-03-16 14:06:49 | INFO     | Ozon API: Raw UNPROCESSED reviews page: 0, has_next: False
+2026-03-16 14:06:49 | INFO     | Ozon API: Processed 0 unanswered reviews after enrichment (min_rating=1)
+2026-03-16 14:06:49 | WARNING  | Ozon API: No reviews after rating filter - check API response structure in logs
+2026-03-16 14:06:49 | INFO     | Ozon: Found 0 unanswered reviews ready for processing
+2026-03-16 14:06:49 | INFO     | OzonBot: Начало обработки отзывов
+2026-03-16 14:06:49 | INFO     | Ozon API: Raw UNPROCESSED page: 0, has_next: False
+2026-03-16 14:06:49 | INFO     | Ozon API: Raw UNPROCESSED reviews page: 0, has_next: False
+2026-03-16 14:06:49 | INFO     | Ozon API: Processed 0 unanswered reviews after enrichment (min_rating=1)
+2026-03-16 14:06:49 | WARNING  | Ozon API: No reviews after rating filter - check API response structure in logs
+2026-03-16 14:06:49 | INFO     | Ozon: Found 0 unanswered reviews ready for processing
+2026-03-16 14:06:49 | INFO     | OzonBot: Нет новых отзывов для обработки

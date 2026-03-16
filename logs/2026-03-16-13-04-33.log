@@ -1,0 +1,3 @@
+2026-03-16 13:04:34 | INFO     | Ozon: Успешное подключение к API
+2026-03-16 13:04:34 | ERROR    | Ozon API: 400: {"code":3, "message":"Request validation error: invalid ReviewListRequest.Status: value must be in list [ ALL PROCESSED UNPROCESSED]"}
+2026-03-16 13:04:34 | INFO     | Ozon API: Found 0 unanswered reviews (min_rating=1)
