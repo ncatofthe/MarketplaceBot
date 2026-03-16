@@ -1,239 +1,264 @@
-# MarketplaceBot 🛒🤖 - Полное руководство
+```markdown
+# MarketplaceBot 🤖🛒 – Полное руководство
 
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Tests](https://img.shields.io/badge/Tests-PASS-brightgreen.svg)](test_all.py)
+[![Tests](https://img.shields.io/badge/Tests-PASS-brightgreen.svg)](tests/test_all.py)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)]()
 
-**Автоматический бот для ответов на отзывы Ozon & Wildberries.**  
-GUI, templates по звездам (1⭐ извините → 5⭐ спасибо), детальные логи, EXE.
+**Автоматический бот для ответов на отзывы Ozon и Wildberries.**  
+Графический интерфейс, шаблоны по звёздам (1⭐ извинения → 5⭐ благодарность), детальные логи, готовая сборка EXE.
+
+---
 
 ## 📋 Содержание
-- [Что делает](#-что-делает)
+- [Как это работает](#-как-это-работает)
 - [Требования](#-требования)
-- [Запуск по ОС](#-запуск-по-ос)
-- [Настройка API](#-настройка-api)
-- [GUI](#-gui)
-- [Файлы проекта](#-файлы-проекта)
+- [Быстрый старт](#-быстрый-старт)
+  - [Готовый EXE (Windows)](#-готовый-exe-windows)
+  - [Запуск из исходников (Windows/Linux/macOS)](#-запуск-из-исходников-windowslinuxmacos)
+- [Настройка API ключей](#-настройка-api-ключей)
+- [Интерфейс (GUI)](#-интерфейс-gui)
+- [Структура проекта](#-структура-проекта)
 - [Кастомизация](#-кастомизация)
-- [Тесты](#-тесты)
-- [Ошибки](#-ошибки)
-- [Build EXE](#-build-exe)
+- [Тестирование](#-тестирование)
+- [Поиск и устранение ошибок](#-поиск-и-устранение-ошибок)
+- [Сборка EXE](#-сборка-exe)
+- [Лицензия и поддержка](#-лицензия-и-поддержка)
 
-## 🎯 Что делает бот (шаг за шагом)
+---
 
-1. **Каждые 60мин** (настройка) → API check **неотвеченных** (UNPROCESSED)
-2. **Fetch**: ID, rating (1-5), text (Ozon pagination 100+/page)
-3. **Parse**: raw rating from API → bot rating
-4. **Generate**: random from templates `"1": ["Извините...", "Нам жаль..."]`
-5. **Log**: `"Raw=1 type=int → extracted=1 → 'Извините...' sent ID=abc"`
-6. **Send** + mark PROCESSED
+## 🎯 Как это работает (шаг за шагом)
 
-**Пример лога:**
+1. **Каждые N минут** (настраивается, по умолчанию 60) бот запрашивает через API **неотвеченные** (`UNPROCESSED`) отзывы.
+2. **Получение данных**: ID отзыва, рейтинг (1–5), текст отзыва, наличие ответа продавца.
+3. **Фильтрация** по `min_stars`: если рейтинг ниже заданного – отзыв пропускается.
+4. **Генерация ответа**: из списка шаблонов для данного рейтинга выбирается случайный.
+5. **Отправка ответа** через API и **пометка отзыва как обработанного** (`PROCESSED`).
+6. **Логирование** каждого действия: `Raw rating=1 (int) → extracted=1 → выбран шаблон '...' → отправлено`.
+
+### 📌 Пример лога
 ```
 Ozon ID=abc: Raw rating=1 (int), extracted=1, keys=['rating','text']
 OzonBot: Отзыв abc (1⭐, comment=True): 'Нам жаль за 1⭐. Извините. Свяжитесь...'
-Sent OK
+Ответ отправлен, статус PROCESSED.
 ```
+
+---
 
 ## 📥 Требования
 
-| OS | Python | Другое |
-|-----|--------|--------|
-| **Windows** | 3.8+ | - |
-| **Linux/Mac** | 3.8+ | tkinter (`sudo apt install python3-tk`) |
+| Компонент      | Требование                             |
+|----------------|----------------------------------------|
+| Python         | 3.8 или выше (для запуска из кода)     |
+| Операционная   | Windows, Linux (с tkinter), macOS      |
+| Дополнительно  | Интернет, доступ к API Ozon/Wildberries |
 
-**Зависимости** (`pip install -r requirements.txt`):
-- `requests` - API calls
-- `pycryptodome` - WB auth
-- `tkinter` - GUI (built-in)
-
-## 🚀 Запуск по ОС (подробно)
-
-### **Windows (EXE - проще)**
-
-1. Скачайте `dist/MarketplaceBot.exe` (Releases)
-2. **Двойной клик** → GUI открывается
-3. Если не запускается → антивирус whitelist or `python main.py`
-
-### **Windows (Python)**
-
-1. **Скачать Python**: [python.org/downloads/windows](https://www.python.org/downloads/windows) → "Add to PATH" → Install
-2. **Открыть CMD**: Win+R → `cmd`
-3. **Clone**:
-```cmd
-git clone https://github.com/gzhiharev/MarketplaceBot.git
-cd MarketplaceBot
-```
-4. **Deps**:
-```cmd
+**Зависимости Python** (устанавливаются одной командой):
+```bash
 pip install -r requirements.txt
 ```
-5. **Запуск**:
+Главные библиотеки: `requests`, `pycryptodome` (для WB), `tkinter` (встроен в Python).
+
+---
+
+## 🚀 Быстрый старт
+
+### ✅ Готовый EXE (Windows – самый простой способ)
+1. Скачайте последний **MarketplaceBot.exe** из раздела [Releases](https://github.com/yourusername/MarketplaceBot/releases).
+2. Запустите двойным кликом – откроется главное окно.
+3. Введите API ключи в настройках и нажмите **Старт**.
+> Если антивирус блокирует – добавьте в исключения или используйте запуск из исходников.
+
+### 🐍 Запуск из исходников (Windows/Linux/macOS)
+
+#### Windows
+1. **Установите Python** с [python.org](https://www.python.org/downloads/windows/) (обязательно отметьте "Add to PATH").
+2. Откройте **Командную строку** (Win+R → `cmd`).
+3. Выполните:
 ```cmd
+git clone https://github.com/yourusername/MarketplaceBot.git
+cd MarketplaceBot
+pip install -r requirements.txt
 python main.py
 ```
 
-### **Linux (Ubuntu/Debian)**
-
-1. **Python + tkinter**:
+#### Linux (Ubuntu/Debian)
 ```bash
 sudo apt update
-sudo apt install python3.8 python3-pip python3-tk git
-```
-2. **Clone/deps/run**:
-```bash
-git clone https://github.com/gzhiharev/MarketplaceBot.git
+sudo apt install python3 python3-pip python3-tk git
+git clone https://github.com/yourusername/MarketplaceBot.git
 cd MarketplaceBot
 pip3 install -r requirements.txt
 python3 main.py
 ```
 
-### **macOS**
-
-1. **Homebrew + Python**:
+#### macOS
 ```bash
 brew install python git
-```
-2. **Clone/deps/run** (same as Linux):
-```bash
-git clone https://github.com/gzhiharev/MarketplaceBot.git
+git clone https://github.com/yourusername/MarketplaceBot.git
 cd MarketplaceBot
 pip3 install -r requirements.txt
 python3 main.py
 ```
 
-## 🔑 Настройка API (5 мин)
+---
 
-### **Ozon API**
-1. [seller.ozon.ru](https://seller.ozon.ru) → **Settings → API Keys → Create**
-2. Permissions: **Reviews** (read/write)
-3. Copy **API Key** (UUID), **Client ID** → GUI Settings/Ozon
+## 🔑 Настройка API ключей
 
-### **Wildberries API**
-1. [seller.wb.ru](https://seller.wb.ru) → **Settings → Access to API → Create**
-2. Copy **Token** → GUI Settings/WB
+### Ozon
+1. Войдите в [seller.ozon.ru](https://seller.ozon.ru) → **Настройки** → **API ключи**.
+2. Создайте новый ключ с правами **Отзывы** (чтение и запись).
+3. Скопируйте **API ключ** (UUID) и **Client ID**.
 
-**Test**: GUI Start → Logs "Connect OK"
+### Wildberries
+1. Войдите в [seller.wb.ru](https://seller.wb.ru) → **Настройки** → **Доступ к API**.
+2. Создайте токен с правами **Отзывы**.
+3. Скопируйте **токен**.
 
-## 📱 GUI Полное руководство
+Все ключи вводятся в GUI (вкладка **Settings**) и сохраняются в `settings/config.json`.
+
+---
+
+## 🖥️ Интерфейс (GUI)
+
+Главное окно состоит из четырёх вкладок:
+
+| Вкладка      | Назначение                                                                 |
+|--------------|----------------------------------------------------------------------------|
+| **Settings** | Включение маркетплейсов, ввод API ключей, выбор минимальной звезды (`min_stars`) и интервала проверки (в минутах). Кнопки **Save** и **Start/Stop**. |
+| **Templates**| Редактирование шаблонов ответов для каждого рейтинга (1–5). Можно добавлять несколько вариантов – бот выберет случайный. |
+| **Logs**     | Потоковое отображение логов работы бота.                                   |
+| **Status**   | Индикаторы работы ботов, статистика обработанных отзывов.                  |
+
+---
+
+## 📁 Структура проекта (подробно)
 
 ```
-[Settings] ← API keys, min_stars=1 (answer 1*), interval=60min → Save → Start bots
-[Templates] ← JSON edit "1": ["Извините..."] → Save
-[Logs] ← Live "Raw rating=3 → answer sent"
-[Status] ← Bots running?
+MarketplaceBot/
+├── main.py                      # Точка входа (запуск GUI)
+├── config.py                    # Загрузка/сохранение конфигурации
+├── settings/
+│   ├── config.json              # Файл настроек (создаётся автоматически, в .gitignore)
+│   └── config.example.json       # Пример конфигурации
+├── api/
+│   ├── ozon_api.py              # Работа с API Ozon (список отзывов, ответы, пагинация)
+│   └── wb_api.py                # Работа с API Wildberries
+├── bots/
+│   ├── base_bot.py              # Базовый класс с циклом обработки и логикой
+│   ├── ozon_bot.py              # Реализация для Ozon
+│   └── wildberries_bot.py       # Реализация для Wildberries
+├── gui/
+│   └── main_window.py           # Основное окно (вкладки, виджеты)
+├── utils/
+│   ├── logger.py                # Настройка логирования (консоль + файл)
+│   └── answers.py               # Генерация ответов по шаблонам
+├── tests/                         # Тесты
+│   ├── test_all.py              # Интеграционный тест: импорты, конфиг, ответы
+│   ├── test_ozon_full.py        # Реальный прогон Ozon (обработано 163 отзыва)
+│   ├── test_ozon.py             # Проверка получения отзывов
+│   └── test_check.py            # Быстрая проверка импортов
+├── docs/                           # Документация на русском
+│   ├── ИНСТРУКЦИЯ.md
+│   ├── CHANGELOG.md
+│   └── ИСПРАВЛЕНИЯ.md
+├── build/                          # Сборка EXE
+│   ├── MarketplaceBot.spec
+│   ├── build.bat                   # Скрипт для сборки
+│   └── dist/
+│       └── MarketplaceBot.exe
+├── requirements.txt
+└── .gitignore
 ```
 
-## 📁 Файлы проекта (подробно)
+---
 
-### **Запуск**
-| Файл | Что делает | Изменять? |
-|------|------------|-----------|
-| `main.py` | `run_gui()` | No |
-| `gui/main_window.py` | 4 tabs | GUI custom |
+## 🎛️ Кастомизация
 
-### **Конфиг**
-| Файл | Что | Edit |
-|------|----|------|
-| `config.py` | Load/save config.json | No |
-| `settings/config.json` | Keys/interval (gitignore) | **Yes** notepad++/VSCode |
+### 1. Шаблоны ответов
+Изменить тексты можно прямо в GUI (вкладка **Templates**) или вручную в файле `settings/config.json`:
 
-### **API & Bots**
-| Файл | API/Bot | Custom |
-|------|---------|--------|
-| `api/ozon_api.py` | Ozon v1/review pagination/info | Advanced |
-| `api/wb_api.py` | WB feedbacks | Advanced |
-| `bots/base_bot.py` | Loop + **logs rating→answer** | Logs custom |
-| `bots/ozon_bot.py` | Ozon connect | No |
-| `bots/wildberries_bot.py` | WB | No |
-
-### **Utils**
-| Файл | Что | Custom |
-|------|----|--------|
-| `utils/logger.py` | Logs console/GUI/files | Level |
-| `utils/answers.py` | **Templates 1-5*** | **JSON** |
-
-### **Тесты (подробно)**
-| Команда | Что проверяет | Output |
-|---------|--------------|--------|
-| `python test_all.py` | Imports/config/templates/bots | **[SUCCESS]** |
-| `python test_ozon_full.py` | Ozon full cycle | Logs 163 sent |
-| `python test_ozon.py` | Fetch | "Found N reviews" |
-| `test_check.py` | Quick imports | OK 1-7 |
-
-**Как смотреть:** CMD/PowerShell → copy logs/*.log → Notepad++/VSCode.
-
-### **Build/Docs**
-| Файл | Что | Run |
-|------|----|-----|
-| `build.bat` | EXE | `build.bat` |
-| `.spec` | PyInstaller config | pyinstaller .spec |
-| CHANGELOG/ИНСТРУКЦИЯ etc | History/RU guide | Read |
-
-## 🎛️ Кастомизация (пошагово)
-
-### **1. Шаблоны (тексты ответов)**
-```
-GUI → Templates → Edit:
-{
-  "1": ["Нам жаль 1⭐. Извините!", "Спасибо за отзыв. Разберёмся."],
-  "5": ["Спасибо 5⭐!", "Рады!"]
-}
-→ Save → Restart bots
-```
-**Файл**: `settings/answers.json` (VSCode/Notepad)
-
-### **2. Настройки**
-`settings/config.json` (VSCode):
 ```json
-{
-  "ozon": {"enabled":true, "api_key":"uuid", "company_id":"123"},
-  "general": {"min_stars":1, "interval":30}
+"templates": {
+  "1": ["Нам очень жаль, что так вышло...", "Извините за доставленные неудобства..."],
+  "5": ["Спасибо за высокую оценку!", "Рады, что вам понравилось!"]
 }
 ```
-Reload GUI.
 
-### **3. Логи уровень**
-`config.json "log_level":"DEBUG"` → more info.
+### 2. Основные настройки
+В `config.json` также можно изменить:
+- `min_stars` – минимальный рейтинг для ответа (1 – отвечать на все, 4 – только на 4 и 5).
+- `interval_minutes` – периодичность проверки.
+- Включение/отключение маркетплейсов.
 
-## 🚨 Работа с ошибками (пошагово)
+### 3. Уровень логирования
+Добавьте в `config.json` строку `"log_level": "DEBUG"` для более подробных логов (по умолчанию INFO).
 
-### **1. GUI Logs** (live)
-- Open Logs tab → see "Raw rating error" or "API 403"
+---
 
-### **2. Files**
+## 🧪 Тестирование
+
+Все тесты находятся в папке `tests/`. Для их запуска выполните:
+
+```bash
+python -m unittest discover tests/
 ```
-notepad logs/2026-03-16-14-06-49.log
-# or VSCode logs/*.log
+
+Или по отдельности:
+```bash
+python tests/test_all.py          # [SUCCESS] – всё хорошо
+python tests/test_ozon_full.py    # Реальный прогон Ozon (выводит логи)
+python tests/test_ozon.py         # Проверка получения отзывов
+python tests/test_check.py        # Быстрая проверка импортов
 ```
-Search "ERROR" "WARNING".
 
-### **3. Common**
-| Log | Fix |
-|----|-----|
-| "API key invalid" | New keys seller.ozon.ru |
-| "No reviews" | min_stars too high or all PROCESSED |
-| "403 antibot" | Sleeps/retry OK |
-| "ImportError" | `pip install -r requirements.txt` |
+**test_ozon_full.py** реально обращается к API (только чтение) и логирует найденные отзывы – полезно для проверки интеграции.
 
-**Full**: ИНСТРУКЦИЯ_ПО_ОШИБКАМ.md
+---
 
-## 🧪 Тесты (почему/как)
+## 🚨 Поиск и устранение ошибок
 
-**Зачем**: Verify before/after custom.
+### Где смотреть логи
+- **GUI → Logs** – в реальном времени.
+- **Файлы логов** – в папке `logs/` (например, `2026-03-16-14-06-49.log`). Открывайте блокнотом или VS Code.
+
+### Частые ошибки и решения
+
+| Проблема                           | Вероятное решение                                         |
+|------------------------------------|-----------------------------------------------------------|
+| `API key invalid`                  | Проверьте ключи в личном кабинете Ozon/WB, пересоздайте. |
+| `No reviews found`                 | Убедитесь, что `min_stars` не слишком высок, и есть неотвеченные отзывы. |
+| `403 Forbidden / антибот`          | Бот автоматически делает паузы при ошибках. Если повторяется – проверьте IP. |
+| `ImportError: No module named ...` | Выполните `pip install -r requirements.txt` в окружении.  |
+| Бот не запускается в EXE           | Попробуйте запустить `python main.py`, возможно, проблема с антивирусом. |
+
+Подробный разбор ошибок есть в `docs/ИСПРАВЛЕНИЯ.md`.
+
+---
+
+## 🔨 Сборка EXE (для Windows)
+
+Если хотите собрать исполняемый файл самостоятельно:
+
+```bash
+pip install pyinstaller
+pyinstaller build/MarketplaceBot.spec
+# или запустите build.bat
 ```
-cd MarketplaceBot
-python test_all.py  # [SUCCESS] = OK
-```
-**test_ozon_full.py**: Real API call → logs ratings/answers → **Sent!**
 
-## 🔨 EXE (Windows)
-```
-build.bat  # 30s → dist/MarketplaceBot.exe ready
-```
-Distribute EXE - no Python needed!
+Готовый `.exe` появится в `build/dist/MarketplaceBot.exe`.  
+Его можно распространять – Python не требуется.
 
-## 📄 Лицензия & Support
-MIT - use/fork.
+---
 
-**Issues** on GitHub 🚀
+## 📄 Лицензия и поддержка
+
+Проект распространяется под лицензией **MIT** – можно использовать, модифицировать и распространять свободно.
+
+Если возникли вопросы или предложения:
+- Создайте **Issue** на GitHub.
+- Или напишите в Telegram: [@your_nickname](https://t.me/your_nickname).
+
+**Удачных продаж!** 🚀
+```
