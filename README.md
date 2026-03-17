@@ -258,7 +258,7 @@ pyinstaller build/MarketplaceBot.spec
 
 Если возникли вопросы или предложения:
 - Создайте **Issue** на GitHub.
-- Или напишите в Telegram: [@your_nickname](https://t.me/your_nickname).
+- Или напишите в Telegram: [@your_nickname](https://t.me/karameliew).
 
 **Удачных продаж!** 🚀
 ```
